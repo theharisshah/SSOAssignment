@@ -16,8 +16,11 @@ def home_template():
 
 @app.route('/jotter')
 def user_profile():
-    user = User.get_by_email(session['email'])
-    return render_template('profile.html', author=user.author)
+    if session['email'] is None:
+        return render_template('homepage.html')
+    else:
+        user = User.get_by_email(session['email'])
+        return render_template('profile.html', author=user.author)
 
 
 @app.route('/login')
@@ -43,6 +46,7 @@ def login_user():
         User.login(email)
     else:
         session['email'] = None
+        return render_template('incorrect.html')
 
     author = User.get_by_name(email)
     # return author
