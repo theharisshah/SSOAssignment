@@ -1,3 +1,11 @@
+please keep mongodb active on localhost
+![screenshot from 2018-01-04 13-31-34](https://user-images.githubusercontent.com/21083491/34554700-33a57410-f154-11e7-8607-fd8f16dc1f47.png)
+![screenshot from 2018-01-04 13-31-41](https://user-images.githubusercontent.com/21083491/34554713-40f63578-f154-11e7-9b23-a833812f156d.png)
+![screenshot from 2018-01-04 13-31-51](https://user-images.githubusercontent.com/21083491/34554716-45be0964-f154-11e7-8a5a-a3009f5bb505.png)
+![screenshot from 2018-01-04 13-33-12](https://user-images.githubusercontent.com/21083491/34554722-4c9179ce-f154-11e7-9ce3-403527787ba3.png)
+![screenshot from 2018-01-04 13-33-20](https://user-images.githubusercontent.com/21083491/34554726-52533910-f154-11e7-824d-5fcf74ceeb05.png)
+
+
 # Assignment
 
 Implement single sign-on functionality using any language and platform. The submission must include:
