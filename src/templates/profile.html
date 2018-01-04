@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h4> Hello, {{ author }}<h6><a href="/edit-profile" class="badge badge-pill badge-primary">Edit-profile</a></h6></h4>
+    </div>
+<div class="container">
+    <a href="/blogs"><button type="button" class="btn btn-success">Show Blogs</button></a>
+    <a href="/blogs/new"><button type="button" class="btn btn-primary">Create Blog</button></a>
+    <a href="/logout"><button type="button" class="btn btn-danger">Sign out!</button></a>
+</div>
+
+{% endblock %}
