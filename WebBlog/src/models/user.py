@@ -52,6 +52,25 @@ class User(object):
         else:
             return False
 
+
+    @classmethod
+    def update_name(cls, author):
+        user = cls.get_by_email(session['email'])
+
+        Database.update(collection="users", query={'author': user.author}, updated={'$set': {'author': author}})
+
+    @classmethod
+    def update_email(cls, email):
+        user = cls.get_by_email(session['email'])
+
+        Database.update(collection="users", query={'email': user.email}, updated={'$set': {'email': email}})
+
+    @classmethod
+    def update_password(cls, password):
+        user = cls.get_by_email(session['email'])
+
+        Database.update(collection="users", query={'password': user.password}, updated={'$set': {'password': password}})
+
     @staticmethod
     def login(user_email):
         session['email'] = user_email
@@ -83,4 +102,6 @@ class User(object):
 
     def save_to_mongo(self):
         Database.insert("users", self.json())
+
+
 

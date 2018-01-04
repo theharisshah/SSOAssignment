@@ -61,7 +61,7 @@ def register_user():
 
 @app.route('/blogs/<string:user_id>')
 @app.route('/blogs')
-def show_blogs(user_id = None):
+def show_blogs(user_id=None):
     if user_id is not None:
         user = User.get_by_id(user_id)
     else:
@@ -107,6 +107,31 @@ def create_new_post(blog_id):
 def logout():
     session['email'] = None
     return render_template("homepage.html")
+
+
+@app.route('/edit-profile', methods=['GET', 'POST'])
+def edit_profile():
+    if request.method == 'GET':
+        user = User.get_by_email(session['email'])
+        return render_template("edit-profile.html", old_name=user.author, old_email=user.email)
+    else:
+        user = User.get_by_email(session['email'])
+        author = request.form['author']
+        email = request.form['email']
+        password = request.form['password']
+        if request.form['author'] == "":
+            User.update_name(user.author)
+        else:
+            User.update_name(author)
+        if request.form['email'] == "":
+            User.update_email(user.email)
+        else:
+            User.update_email(email)
+        if request.form['password'] == "":
+            User.update_password(user.password)
+        else:
+            User.update_password(password)
+        return render_template('profile.html', author=user.author)
 
 
 if __name__ == '__main__':

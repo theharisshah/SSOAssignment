@@ -1,4 +1,6 @@
 import pymongo
+
+
 class Database(object):
     URI = "mongodb://localhost:27017"
     DATABASE = None
@@ -19,3 +21,7 @@ class Database(object):
     @staticmethod
     def find_one(collection, query):
         return Database.DATABASE[collection].find_one(query)
+
+    @staticmethod
+    def update(collection, query, updated):
+        Database.DATABASE[collection].find_one_and_update(query, updated)

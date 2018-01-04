@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        <h2>Create new blog here</h2>
+        <h2>Create a new post</h2>
         <form id="new-blog" action="/posts/new/{{ blog_id }}" method="post">
                 <div class="form-group">
                     <label for="title">Title</label>
@@ -11,7 +11,8 @@
                     <label for="content">Content</label>
                     <textarea id="content" name="content" class="form-control"></textarea>
                 </div>
-                <button type="submit" class="btn btn-success">Publish</button>
+               <h4> <button type="submit" class="badge badge-primary">Publish</button>
+                 <a href="/blogs" class="badge badge-secondary">Cancel</a></h4>
         </form>
     </div>
 {% endblock %}
