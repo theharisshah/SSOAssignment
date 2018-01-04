@@ -2,3 +2,5 @@ Flask==0.12.2
 gunicorn==19.7.1
 Werkzeug==0.13
 pymongo==3.6.0
+itsdangerous==0.24
+MarkupSafe==1.0
