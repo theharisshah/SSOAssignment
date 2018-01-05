@@ -1,5 +1,9 @@
 
-in src/database set URI = os.environ.get('MONGODB_URI') to your localhost mongodb uri
+requirements: In src/common/database set URI = os.environ.get('MONGODB_URI') to your localhost mongodb uri
+Created the app using Flask-python and Mongodb.
+
+
+
 
 ![screenshot from 2018-01-04 18-15-17](https://user-images.githubusercontent.com/21083491/34564164-a213af26-f17b-11e7-92c5-c36c37fa07da.png)
 ![screenshot from 2018-01-04 18-15-09](https://user-images.githubusercontent.com/21083491/34564170-a6d91f6e-f17b-11e7-8b0a-6dad58717d7d.png)
