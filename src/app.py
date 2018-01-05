@@ -11,6 +11,7 @@ app.secret_key = '12sasad'
 
 @app.route('/')
 def home_template():
+    session['email'] = None
     return render_template('homepage.html')
 
 
