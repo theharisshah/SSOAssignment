@@ -1,2 +1,1 @@
-web: gunicorn deploy:src.app
-heroku ps:scale web=1
+web: uwsgi uwsgi.ini
