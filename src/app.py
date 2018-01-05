@@ -124,14 +124,19 @@ def edit_profile():
         email = request.form['email']
         password = request.form['password']
         if request.form['author'] == "":
+            user = User.get_by_email(session['email'])
             User.update_name(user.author)
         else:
             User.update_name(author)
         if request.form['email'] == "":
+            user = User.get_by_email(session['email'])
             User.update_email(user.email)
         else:
+            # user = User.get_by_email(session['email'])
             User.update_email(email)
+            session['email'] = email
         if request.form['password'] == "":
+            user = User.get_by_email(session['email'])
             User.update_password(user.password)
         else:
             User.update_password(password)

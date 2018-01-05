@@ -58,18 +58,21 @@ class User(object):
         user = cls.get_by_email(session['email'])
 
         Database.update(collection="users", query={'author': user.author}, updated={'$set': {'author': author}})
+        session['email'] = user.email
 
     @classmethod
     def update_email(cls, email):
         user = cls.get_by_email(session['email'])
 
         Database.update(collection="users", query={'email': user.email}, updated={'$set': {'email': email}})
+        session['email'] = user.email
 
     @classmethod
     def update_password(cls, password):
         user = cls.get_by_email(session['email'])
 
         Database.update(collection="users", query={'password': user.password}, updated={'$set': {'password': password}})
+        session['email'] = user.email
 
     @staticmethod
     def login(user_email):
