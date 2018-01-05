@@ -1,7 +1,9 @@
+
+in src/database set URI = os.environ.get('MONGODB_URI') to your localhost mongodb uri
+
 ![screenshot from 2018-01-04 18-15-17](https://user-images.githubusercontent.com/21083491/34564164-a213af26-f17b-11e7-92c5-c36c37fa07da.png)
 ![screenshot from 2018-01-04 18-15-09](https://user-images.githubusercontent.com/21083491/34564170-a6d91f6e-f17b-11e7-8b0a-6dad58717d7d.png)
 
-please keep mongodb active on localhost
 ![screenshot from 2018-01-04 13-31-34](https://user-images.githubusercontent.com/21083491/34554700-33a57410-f154-11e7-8607-fd8f16dc1f47.png)
 ![screenshot from 2018-01-04 13-31-41](https://user-images.githubusercontent.com/21083491/34554713-40f63578-f154-11e7-9b23-a833812f156d.png)
 ![screenshot from 2018-01-04 13-31-51](https://user-images.githubusercontent.com/21083491/34554716-45be0964-f154-11e7-8a5a-a3009f5bb505.png)
